@@ -13,24 +13,23 @@
   count = 1;
   pass = false;
   
-  while((count < 3) && (pass == false)) {
+  while((count < 3) && !pass) {
     if (guess == answer) {
       alert("Nice work!");
       pass = true;
     }
     else if(guess > answer) {
       guess = prompt("Too high, try again!");
-      count++;
       pass = false;
     }
     else {
       guess = prompt("Too low, try again!");
-      count++;
       pass = false;
     }
+    count++;
   };
     
-  if(pass == false) {
+  if(!pass) {
     alert("3 strikes and you are out.  Better luck next time.");    
   };
     
