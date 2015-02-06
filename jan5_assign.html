@@ -1,36 +1,35 @@
 <script>
-var question,
-answer,
-  guess,
-  count,
-  pass;
+  var question,
+      answer,
+      guess,
+      count,
+      pass;
 
-alert("You have a maximum of 3 attempts to get this right");
-question = ("Can you guess the number of characters that make up this question?");
+  alert("You have a maximum of 3 attempts to get this right");
+  question = ("Can you guess the number of characters that make up this question?");
 
-guess = prompt(question);
-answer = question.length;
-count = 1;
-pass = false;
-
-while((count <= 3) && !pass) {
-  if (guess == answer) {
-  alert("Nice work!");
-  pass = true;
-  }
-  else if(guess > answer) {
-  guess = prompt("Too high, try again!");
+  guess = prompt(question);
+  answer = question.length;
+  count = 1;
   pass = false;
-  }
-  else {
-  guess = prompt("Too low, try again!");
-  pass = false;
-  }
-count++;
-};
 
-if(!pass) {
-  alert("3 strikes and you are out. Better luck next time.");
-};
+  while((count <= 3) && !pass) {
+    if (guess == answer) {
+      alert("Nice work!");
+      pass = true;
+    }
+    else if(guess > answer) {
+      guess = prompt("Too high, try again!");
+      pass = false;
+    }
+    else {
+      guess = prompt("Too low, try again!");
+      pass = false;
+    }
+    count++;
+  };
 
+  if(!pass) {
+    alert("3 strikes and you are out. Better luck next time.");
+  };
 </script>
